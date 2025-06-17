@@ -1,0 +1,12 @@
+<main>
+  <h1>PRODUCT MANAGER</h1>
+  <h2>UNIVERSAL GENERIC APP</h2>
+
+  <app-product-add (productAdded)="productList.loadProducts()"></app-product-add>
+
+  <hr>
+  <app-product-list #productList></app-product-list>
+</main>
+
+
+<router-outlet/>

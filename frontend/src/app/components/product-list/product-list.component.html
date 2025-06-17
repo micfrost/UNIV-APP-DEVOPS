@@ -1,0 +1,22 @@
+<h2>Lista Produktów</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Nazwa</th>
+    <th>Opis</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (product of products; track product.id) {
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+      </tr>
+    }
+    @empty {
+      <tr>
+        <td colspan="2">Brak produktów do wyświetlenia</td>
+      </tr>
+    }
+  </tbody>
+</table>

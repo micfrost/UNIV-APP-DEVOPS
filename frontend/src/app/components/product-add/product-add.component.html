@@ -1,0 +1,13 @@
+<h2>Dodaj Nowy Produkt </h2>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nazwa: </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+  <div>
+    <label for="description">Opis: </label>
+    <input id="description" type="text" formControlName="description">
+  </div>
+  <button type="submit" [disabled]="!productForm.valid">Dodaj Produkt</button>
+</form>
+
